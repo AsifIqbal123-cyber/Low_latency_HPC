@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/dispatcher.dir/src/Dispatcher.cpp.o -o dispatcher  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0 -lpthread 
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/dispatcher.dir/src/Dispatcher.cpp.o -o dispatcher  /opt/homebrew/Cellar/boost/1.88.0/lib/libboost_system.dylib -lpthread

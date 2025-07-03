@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/feed_handler.dir/src/main.cpp.o CMakeFiles/feed_handler.dir/src/FeedReceiver.cpp.o -o feed_handler  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0 -lpthread 
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/feed_handler.dir/src/main.cpp.o CMakeFiles/feed_handler.dir/src/FeedReceiver.cpp.o -o feed_handler  /opt/homebrew/Cellar/boost/1.88.0/lib/libboost_system.dylib -lpthread

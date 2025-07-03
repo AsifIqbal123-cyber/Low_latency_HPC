@@ -16,8 +16,9 @@ int main(){
         socket.open(asio::ip::udp::v4());
 
         //Destination (port: 9000)
-        asio::ip::udp::endpoint receiver_endpoint(
-        asio::ip::address::from_string("127.0.0.1"),9000);
+
+        asio::ip::address address = asio::ip::make_address("127.0.0.1");
+        asio::ip::udp::endpoint receiver_endpoint(address,9000);
 
         //Temporary trademessage
 

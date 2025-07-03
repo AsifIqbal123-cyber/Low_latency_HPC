@@ -2,6 +2,7 @@
 #include <iostream>
 #include <boost/system/error_code.hpp>
 #include "../include/Types.h"
+#include "Utils.cpp"
 namespace asio = boost::asio;
 using udp = asio::ip::udp;
 
@@ -35,6 +36,7 @@ void FeedReceiver::handle_packet(const char* data, size_t length ){
         return;
     }
 
+    Timer timer;
     TradeMessage msg;
 
     memcpy(&msg,data,sizeof(TradeMessage));
@@ -44,6 +46,10 @@ void FeedReceiver::handle_packet(const char* data, size_t length ){
         << " side: "<<msg.side<<endl;
 
 
+    double elapsed = timer.eleapsed_microseconds();
+
+    cout<<"LATENCY: Packet processed in "<<elapsed<<" us\n"<<endl;
+    cout<< "-----------------------------------\n"; 
 
     // cout<<"Received " <<length<< " bytes: ";
     // for(int i=0; i<length;i++){
